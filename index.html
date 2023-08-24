@@ -1,184 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Calculator</title>
-    <style>
-     .Calculator
-     {
-        width: 410px;
-        height: auto;
-        background-color: silver;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 50px;
-        margin-top: 60px;
-        padding: 15px;
-        border-radius: 19px;
-     } 
-     .top-solar
-     {
-        display: flex;
-       flex-direction: row-reverse;
-       margin-top: 5px;
-       margin-right: 5px;
-       
-     }
-     .solar
-     {
-        width: 30px;
-        height: 40px;
-        background-color: rgb(88, 77, 77);
-     }
-     .heding
-     {
-        display: block;
-        margin-right:auto;
-        margin-top: 3px;
-        
-     }
-     .calculator-screen
-     {
-        font-size: 36px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px;
-        width: 340px;
-        border-radius: 5px;
-        background-color: rgb(162, 223, 202);
-        padding: 4px;
+   <title>Calculator</title>
+   <style>
+      .Calculator {
+         width: 410px;
+         height: auto;
+         background-color: silver;
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 50px;
+         margin-top: 60px;
+         padding: 15px;
+         border-radius: 19px;
+      }
 
-     }
-     .screen-2
-     {
-        width:365px ;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 15px;
-        background-color: rgb(134, 128, 128);
-        border-radius: 10px;
-        padding-bottom: 25px;
-     }
-     .button-row
-     {
-        display: flex;
-       flex-direction: row-reverse;
-       margin-top: 5px
-     
+      .top-solar {
+         display: flex;
+         flex-direction: row-reverse;
+         margin-top: 5px;
+         margin-right: 5px;
 
-       
+      }
 
+      .solar {
+         width: 30px;
+         height: 40px;
+         background-color: rgb(88, 77, 77);
+      }
 
-     }
-     .cal-button
-     {
-       font-size:26px ;
-       border-radius: 5px;
-       width: 80px;
-       height: 50px;
-      background-color: rgb(12, 136, 12);
-      color: whitesmoke;
-      margin-top: 10px;
-      margin-right: 10px;
-      
+      .heding {
+         display: block;
+         margin-right: auto;
+         margin-top: 3px;
 
-     }
-     .button3
-     {
-       display: flex;
-       flex-direction: row;
-       justify-content: space-evenly;
-       margin-top: 10px;
-       
+      }
+
+      .calculator-screen {
+         font-size: 36px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 5px;
+         width: 340px;
+         border-radius: 5px;
+         background-color: rgb(162, 223, 202);
+         padding: 4px;
+
+      }
+
+      .screen-2 {
+         width: 365px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 15px;
+         background-color: rgb(134, 128, 128);
+         border-radius: 10px;
+         padding-bottom: 25px;
+      }
+
+      .button-row {
+         display: flex;
+         flex-direction: row-reverse;
+         margin-top: 5px
+      }
+
+      .cal-button {
+         font-size: 26px;
+         border-radius: 5px;
+         width: 80px;
+         height: 50px;
+         background-color: rgb(12, 136, 12);
+         color: whitesmoke;
+         margin-top: 10px;
+         margin-right: 10px;
 
 
+      }
 
-     }
-     .cal-row
-     {
-       
-       border-radius: 5px;
-       width: 70PX;
-       height: 50PX;
-       background-color: black;
-       color: aliceblue;
-       font-size: larger;
-      
-
-
-     }
+      .button3 {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-evenly;
+         margin-top: 10px;
 
 
 
 
+      }
+
+      .cal-row {
+
+         border-radius: 5px;
+         width: 70PX;
+         height: 50PX;
+         background-color: black;
+         color: aliceblue;
+         font-size: larger;
 
 
-    </style>
+
+      }
+   </style>
 </head>
+
 <body>
 
-    <div class="Calculator">
- 
-     <div class="top-solar" >
-        
-        <button class="solar"></button>
-        <button class="solar"></button>
-        <button class="solar"></button>
-        <button class="solar"></button>
-        <h2 class="heding">CITLLZEN</h2><br>
-        
-     </div>
-     <div class="screen-2">
-     <input type="text" class="calculator-screen">
+   <div class="Calculator">
+
+      <div class="top-solar">
+
+         <button class="solar"></button>
+         <button class="solar"></button>
+         <button class="solar"></button>
+         <button class="solar"></button>
+         <h2 class="heding">CITLLZEN</h2><br>
+
+      </div>
+      <div class="screen-2">
+         <input type="text" class="calculator-screen" id="input">
       </div>
 
       <div class="button-row">
-        <button class="cal-button">ON</button>
-      
-      </div>
-
-      <div class="button3">
-         
-         <button class="cal-row">GT</button>
-         <button class="cal-row">7</button>
-         <button class="cal-row">8</button>
-         <button class="cal-row">9</button>
-         <button class="cal-row">x</button>
-         
-
+         <button class="cal-button" onclick="clearScreen()">ON</button>
 
       </div>
 
       <div class="button3">
-      
-         <button class="cal-row">%</button>
-         <button class="cal-row">4</button>
-         <button class="cal-row">5</button>
-         <button class="cal-row">6</button>
-         <button class="cal-row">+</button>
-      
+
+         <button class="cal-row" onclick="clearScreen()">GT</button>
+         <button class="cal-row" onclick="handlekeypress('7')">7</button>
+         <button class="cal-row" onclick="handlekeypress('8')">8</button>
+         <button class="cal-row" onclick="handlekeypress('9')">9</button>
+         <button class="cal-row" onclick="handlekeypress('x')">x</button>
+
+
+
       </div>
 
       <div class="button3">
-      
-         <button class="cal-row">/</button>
-         <button class="cal-row">1</button>
-         <button class="cal-row">2</button>
-         <button class="cal-row">3</button>
-         <button class="cal-row">-</button>
-      
+
+         <button class="cal-row" onclick="handlekeypress('%')">%</button>
+         <button class="cal-row" onclick="handlekeypress('4')">4</button>
+         <button class="cal-row" onclick="handlekeypress('5')">5</button>
+         <button class="cal-row" onclick="handlekeypress('6')">6</button>
+         <button class="cal-row" onclick="handlekeypress('+')">+</button>
+
       </div>
 
       <div class="button3">
-      
-         <button class="cal-row">CE</button>
-         <button class="cal-row">0</button>
-         <button class="cal-row">00</button>
-         <button class="cal-row">.</button>
-         <button class="cal-row">=</button>
-      
+
+         <button class="cal-row" onclick="handlekeypress('/')">/</button>
+         <button class="cal-row" onclick="handlekeypress('1')">1</button>
+         <button class="cal-row" onclick="handlekeypress('2')">2</button>
+         <button class="cal-row" onclick="handlekeypress('3')">3</button>
+         <button class="cal-row" onclick="handlekeypress('-')">-</button>
+
       </div>
-    </div>
+
+      <div class="button3">
+
+         <button class="cal-row" onclick="clearScreen()">CE</button>
+         <button class="cal-row" onclick="handlekeypress('0')">0</button>
+         <button class="cal-row" onclick="handlekeypress('00')">00</button>
+         <button class="cal-row" onclick="handlekeypress('.')">.</button>
+         <button class="cal-row" onclick="calculate('=')">=</button>
+
+      </div>
+   </div>
+   <script>
+      function handlekeypress(key) {
+         const inputScreen = document.getElementById('input');
+         inputScreen.value = inputScreen.value + (key);
+      }
+
+      function calculate() {
+         const inputScreen = document.getElementById('input');
+         inputScreen.value = eval(inputScreen.value);
+      }
+
+      function clearScreen() {
+         const inputScreen = document.getElementById('input');
+         inputScreen.value = '';
+      }
+   </script>
 </body>
+
 </html>
